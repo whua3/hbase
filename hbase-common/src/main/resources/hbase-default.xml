@@ -42,8 +42,12 @@ possible configurations would overwhelm and obscure the important.
   <!--Configs you will likely change are listed here at the top of the file.
   -->
   <property >
+    <name>hbase.unsafe.stream.capability.enforce</name>
+    <value>false</value>
+  </property>
+  <property >
     <name>hbase.tmp.dir</name>
-    <value>${java.io.tmpdir}/hbase-${user.name}</value>
+    <value>/Users/garyhwang/Documents/localTestDir/hbase-master/java-hbase-${user.name}</value>
     <description>Temporary directory on the local filesystem.
     Change this setting to point to a location more permanent
     than '/tmp', the usual resolve for java.io.tmpdir, as the
@@ -51,7 +55,7 @@ possible configurations would overwhelm and obscure the important.
   </property>
   <property >
     <name>hbase.rootdir</name>
-    <value>${hbase.tmp.dir}/hbase</value>
+    <value>/Users/garyhwang/Documents/localTestDir/hbase-master/hbase</value>
     <description>The directory shared by region servers and into
     which HBase persists.  The URL should be 'fully-qualified'
     to include the filesystem scheme.  For example, to specify the
@@ -1310,7 +1314,7 @@ possible configurations would overwhelm and obscure the important.
   </property>
   <property>
     <name>hbase.defaults.for.version.skip</name>
-    <value>false</value>
+    <value>true</value>
     <description>Set to true to skip the 'hbase.defaults.for.version' check.
     Setting this to true can be useful in contexts other than
     the other side of a maven generation; i.e. running in an
